@@ -8,4 +8,80 @@ editor_options:
   chunk_output_type: console
 ---
 
-Welcome to my research website.
+# Using `{DT}` and `{githubinstall}` R packages to fetch and display in an interactive table github hosted R packages containing the term `phylogenetic` in teh repo description
+
+# Loading libraries 
+
+```{r}
+library(githubinstall)
+library(DT)
+library(skimr)
+library(BiocManager)
+```
+
+
+# Searching for packages relevant to `phylogenetic`
+
+The following brief tutorial will guide you through the functions of the `{githubinstall}` R package, a package to easily query GitHub and find all relevant R packages to your selected query search term of interest. The function `githubinstall::gh_search_packages()` returns the list of R packages on GitHub that the titles contains a given #keyword .
+
+
+For example, if you want to search packages that are relevant to `phylogenetic`, run the following:
+
+
+```{r}
+#  Search Packages by a Keyword, in this example we search for "phylogenetic" 
+# install.packages("githubinstall") || found here: hoxo-m.github.io/githubinstall/
+
+keyword <- "phylogenetic"
+
+library(githubinstall)
+
+pckges    <- githubinstall::gh_search_packages(keyword)
+skimr::skim(pckges)
+```
+
+## Let's inspect what packages we retrieved related to `{phylogenetic}`
+
+```{r}
+DT::datatable(pckges)
+```
+
+Above we can see how many packages were found that contain the search term in their description. The `githubinstall::gh_search_packages` function returns 3 arguments for each package:
+
+- `username`:account name of package developer on GitHub
+- `package_name`:the name of the package that you can use as argument in the `install.packages()` function
+- `title`: the description of the package
+
+# 🤔 Mmm, wouldn't it be nice if the package name was actually a <clickable> link..
+
+Let's try to add some interactivity to our retrieved table and convert the package names to clickable links that will take us to the github repo of the packages.
+
+## Reconstructing the R package GitHub repo url for clickable links 
+
+We will recontruct the string with the above pattern for all found packages, and add the html tag for redirecting so the pattern to recreate should look like this:
+
+```{r}
+# Mutate the package names to create clickable links:
+
+pckges$package_name <- paste0("<a href='https://github.com/",
+                             pckges$username, 
+                             "/",
+                             pckges$package_name, 
+                             "'/",
+                             "target='blank",
+                             "'>",
+                             pckges$package_name, 
+                             "</a>")
+```
+
+## Updated datatable with clickable links!
+
+Now we can inspect the packages that seem interesting by clicking the link. This will take us to the respective repository in GitHub.
+
+
+```{r}
+DT::datatable(pckges[,-1],      # the -1 to omit the username in the output table
+              escape = FALSE   # this is required for the url
+             )
+```
+
