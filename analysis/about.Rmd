@@ -7,4 +7,4 @@ editor_options:
   chunk_output_type: console
 ---
 
-Describe your project.
+The current project is a `Hello-world` of working with `{workflowr}` to publish Rmd-focused analyses.
