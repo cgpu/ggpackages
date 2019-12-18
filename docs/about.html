@@ -398,7 +398,7 @@ div.section {
 
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
-<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span>
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 </button>
 </p>
 <div id="workflowr-report" class="collapse">
@@ -407,7 +407,7 @@ div.section {
 <a data-toggle="tab" href="#summary">Summary</a>
 </li>
 <li>
-<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> </a>
+<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -419,7 +419,7 @@ div.section {
 <strong>Last updated:</strong> 2019-12-18
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 1
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
 </p>
 <p>
 <strong>Knit directory:</strong> <code>ggpackages/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
@@ -435,12 +435,12 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges"> <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted changes </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguncommittedchanges" class="panel-collapse collapse">
+<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown file has unstaged changes. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
+<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
 </div>
 </div>
 </div>
@@ -507,18 +507,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomcgpuggpackagestreee76d56c930a5ed3cd3180245006a56628a4240cetargetblanke76d56ca"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/cgpu/ggpackages/tree/e76d56c930a5ed3cd3180245006a56628a4240ce" target="_blank">e76d56c</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomcgpuggpackagestreee28f3572cb8015c47d80246de2f0074ab1dde2fftargetblanke28f357a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/cgpu/ggpackages/tree/e28f3572cb8015c47d80246de2f0074ab1dde2ff" target="_blank">e28f357</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomcgpuggpackagestreee76d56c930a5ed3cd3180245006a56628a4240cetargetblanke76d56ca" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomcgpuggpackagestreee28f3572cb8015c47d80246de2f0074ab1dde2fftargetblanke28f357a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 </p>
 <pre><code>
-Unstaged changes:
-    Modified:   analysis/about.Rmd
-
+working directory clean
 </code></pre>
 <p>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
@@ -556,6 +554,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/cgpu/ggpackages/blob/e28f3572cb8015c47d80246de2f0074ab1dde2ff/analysis/about.Rmd" target="_blank">e28f357</a>
+</td>
+<td>
+cgpu
+</td>
+<td>
+2019-12-18
+</td>
+<td>
+Updates about.Rmd with mini githubinstall tutorial
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/cgpu/ggpackages/e28f3572cb8015c47d80246de2f0074ab1dde2ff/docs/about.html" target="_blank">e28f357</a>
+</td>
+<td>
+cgpu
+</td>
+<td>
+2019-12-18
+</td>
+<td>
+Updates about.Rmd with mini githubinstall tutorial
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -807,7 +839,7 @@ attached base packages:
 
 other attached packages:
 [1] BiocManager_1.30.10 skimr_2.0.2         DT_0.10            
-[4] githubinstall_0.2.2
+[4] githubinstall_0.2.2 workflowr_1.5.0    
 
 loaded via a namespace (and not attached):
  [1] Rcpp_1.0.3        tidyr_1.0.0       prettyunits_1.0.2 ps_1.3.0         
@@ -819,14 +851,14 @@ loaded via a namespace (and not attached):
 [25] stringr_1.4.0     htmlwidgets_1.5.1 shiny_1.4.0       compiler_3.6.0   
 [29] httpuv_1.5.2      xfun_0.11         pkgconfig_2.0.3   base64enc_0.1-3  
 [33] pkgbuild_1.0.6    htmltools_0.4.0   tidyselect_0.2.5  tibble_2.1.3     
-[37] workflowr_1.5.0   fansi_0.4.0       crayon_1.3.4      dplyr_0.8.3      
-[41] withr_2.1.2       later_1.0.0       xtable_1.8-4      jsonlite_1.6     
-[45] lifecycle_0.1.0   git2r_0.26.1      magrittr_1.5      cli_2.0.0        
-[49] stringi_1.4.3     fs_1.3.1          promises_1.1.0    remotes_2.1.0    
-[53] testthat_2.3.1    ellipsis_0.3.0    vctrs_0.2.1       tools_3.6.0      
-[57] glue_1.3.1        purrr_0.3.3       crosstalk_1.0.0   fastmap_1.0.1    
-[61] processx_3.4.1    pkgload_1.0.2     yaml_2.2.0        sessioninfo_1.1.1
-[65] memoise_1.1.0     knitr_1.26        usethis_1.5.1    </code></pre>
+[37] fansi_0.4.0       crayon_1.3.4      dplyr_0.8.3       withr_2.1.2      
+[41] later_1.0.0       xtable_1.8-4      jsonlite_1.6      lifecycle_0.1.0  
+[45] git2r_0.26.1      magrittr_1.5      cli_2.0.0         stringi_1.4.3    
+[49] fs_1.3.1          promises_1.1.0    remotes_2.1.0     testthat_2.3.1   
+[53] ellipsis_0.3.0    vctrs_0.2.1       tools_3.6.0       glue_1.3.1       
+[57] purrr_0.3.3       crosstalk_1.0.0   fastmap_1.0.1     processx_3.4.1   
+[61] pkgload_1.0.2     yaml_2.2.0        sessioninfo_1.1.1 memoise_1.1.0    
+[65] knitr_1.26        usethis_1.5.1    </code></pre>
 </div>
 </div>
 </div>
