@@ -21,19 +21,19 @@ library(BiocManager)
 ```
 
 
-# Searching for packages relevant to ggplot2
+# Searching for packages relevant to `phylogenetic`
 
 The following brief tutorial will guide you through the functions of the `{githubinstall}` R package, a package to easily query GitHub and find all relevant R packages to your selected query search term of interest. The function `githubinstall::gh_search_packages()` returns the list of R packages on GitHub that the titles contains a given #keyword .
 
 
-For example, if you want to search packages that are relevant to `ggplot2`, run the following:
+For example, if you want to search packages that are relevant to `phylogenetic`, run the following:
 
 
 ```{r}
-#  Search Packages by a Keyword, in this example we search for "ggplot2" 
+#  Search Packages by a Keyword, in this example we search for "phylogenetic" 
 # install.packages("githubinstall") || found here: hoxo-m.github.io/githubinstall/
 
-keyword <- "ggplot2"
+keyword <- "phylogenetic"
 
 library(githubinstall)
 
@@ -41,7 +41,7 @@ pckges    <- githubinstall::gh_search_packages(keyword)
 skimr::skim(pckges)
 ```
 
-## Let's inspect what packages we retrieved related to `{ggplot2}`
+## Let's inspect what packages we retrieved related to `{phylogenetic}`
 
 ```{r}
 DT::datatable(pckges)
